@@ -14,10 +14,10 @@ from pathlib import Path
 from datetime import timedelta
 from dotenv import load_dotenv
 import os
-
 import dj_database_url
-# from rest_framework_simplejwt.authentication import JWTAuthentication
+
 load_dotenv()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -35,11 +35,10 @@ POSTGREL_URL = os.getenv("POSTGREL_URL")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['back-django-adopt-874f71a4ab03.herokuapp.com']
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -51,7 +50,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
 ]
-# AUTH_USER_MODEL = 'back_elsa.User'
 
 REST_FRAMEWORK = {
     # # 'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -95,7 +93,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'back_elsa.urls'
-# ROOT_URLCONF = 'back_elsa.urls.urls'
 
 TEMPLATES = [
     {
@@ -192,6 +189,3 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 WHITENOISE_KEEP_ONLY_HASHED_FILES = True
-# ALLOWED_HOSTS = ['back-django-53b00ddb11ad.herokuapp.com']
-
-# AUTH_USER_MODEL = 'back_elsa.CustomUser'
