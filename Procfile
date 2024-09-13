@@ -1,0 +1,1 @@
+web: gunicorn --pythonpath back_elsa back_elsa.wsgi --log-file -
